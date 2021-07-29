@@ -1,5 +1,18 @@
-@import "tailwindcss/base";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import "tailwindcss/components";
-
-@import "tailwindcss/utilities";
+@layer base {
+  @font-face {
+    font-family: europa;
+    src: url(/fonts/Europa/EuropaRegular.woff) format("woff");
+  }
+  @font-face {
+    font-family: eurostile;
+    src: url(/fonts/Eurostile/EurostileNormal.woff) format("woff");
+  }
+  @font-face {
+    font-family: eurostile-bold;
+    src: url(/fonts/Eurostile/EurostileBold.woff) format("woff");
+  }
+}
