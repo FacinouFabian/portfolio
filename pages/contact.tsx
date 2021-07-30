@@ -1,174 +1,97 @@
+import * as React from 'react'
 import Layouts from '../core/layouts/'
 
-const Contacts = () => (
-  <Layouts.Application pageTitle="Contact me | Fabian Facinou">
-    <div className="bg-white">
-        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
-            <div className="grid grid-cols-1 gap-16">
-            <div className="lg:grid lg:grid-cols-3 lg:gap-8">
-                <h2 className="text-2xl leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-9">
-                Get in touch
-                </h2>
-                <div className="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:col-gap-8 sm:row-gap-12 lg:mt-0 lg:col-span-2">
-                <div>
-                    <h4 className="text-lg leading-6 font-medium text-gray-900">
-                    Collaborate
-                    </h4>
-                    <dl className="mt-2 text-base leading-6 text-gray-500">
-                    <div>
-                        <dt className="sr-only">
-                        Email
-                        </dt>
-                        <dd>
-                        support@example.com
-                        </dd>
-                    </div>
-                    <div className="mt-1">
-                        <dt className="sr-only">
-                        Phone number
-                        </dt>
-                        <dd>
-                        +1 (555) 123-4567
-                        </dd>
-                    </div>
-                    </dl>
-                </div>
-                <div>
-                    <h4 className="text-lg leading-6 font-medium text-gray-900">
-                    Press
-                    </h4>
-                    <dl className="mt-2 text-base leading-6 text-gray-500">
-                    <div>
-                        <dt className="sr-only">
-                        Email
-                        </dt>
-                        <dd>
-                        support@example.com
-                        </dd>
-                    </div>
-                    <div className="mt-1">
-                        <dt className="sr-only">
-                        Phone number
-                        </dt>
-                        <dd>
-                        +1 (555) 123-4567
-                        </dd>
-                    </div>
-                    </dl>
-                </div>
-                <div>
-                    <h4 className="text-lg leading-6 font-medium text-gray-900">
-                    Join our team
-                    </h4>
-                    <dl className="mt-2 text-base leading-6 text-gray-500">
-                    <div>
-                        <dt className="sr-only">
-                        Email
-                        </dt>
-                        <dd>
-                        support@example.com
-                        </dd>
-                    </div>
-                    <div className="mt-1">
-                        <dt className="sr-only">
-                        Phone number
-                        </dt>
-                        <dd>
-                        +1 (555) 123-4567
-                        </dd>
-                    </div>
-                    </dl>
-                </div>
-                <div>
-                    <h4 className="text-lg leading-6 font-medium text-gray-900">
-                    Say hello
-                    </h4>
-                    <dl className="mt-2 text-base leading-6 text-gray-500">
-                    <div>
-                        <dt className="sr-only">
-                        Email
-                        </dt>
-                        <dd>
-                        support@example.com
-                        </dd>
-                    </div>
-                    <div className="mt-1">
-                        <dt className="sr-only">
-                        Phone number
-                        </dt>
-                        <dd>
-                        +1 (555) 123-4567
-                        </dd>
-                    </div>
-                    </dl>
-                </div>
-                </div>
-            </div>
-            <div className="border-t-2 border-gray-100"></div>
-                <div className="lg:grid lg:grid-cols-3 lg:gap-8">
-                    <h2 className="text-2xl leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-9">
-                    Locations
-                    </h2>
-                    <div className="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:col-gap-8 sm:row-gap-12 lg:mt-0 lg:col-span-2">
-                        <div>
-                            <h4 className="text-lg leading-6 font-medium text-gray-900">
-                            Los Angeles
-                            </h4>
-                            <div className="mt-2 text-base leading-6 text-gray-500">
-                            <p>
-                                4556 Brendan Ferry
-                            </p>
-                            <p className="mt-1">
-                                Los Angeles, CA 90210
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 className="text-lg leading-6 font-medium text-gray-900">
-                        New York
-                        </h4>
-                        <div className="mt-2 text-base leading-6 text-gray-500">
-                            <p>
-                                886 Walter Streets
-                            </p>
-                            <p className="mt-1">
-                                New York, NY 12345
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 className="text-lg leading-6 font-medium text-gray-900">
-                        Toronto
-                        </h4>
-                        <div className="mt-2 text-base leading-6 text-gray-500">
-                            <p>
-                                7363 Cynthia Pass
-                            </p>
-                            <p className="mt-1">
-                                Toronto, ON N3Y 4H8
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 className="text-lg leading-6 font-medium text-gray-900">
-                        Chicago
-                        </h4>
-                        <div className="mt-2 text-base leading-6 text-gray-500">
-                            <p>
-                                726 Mavis Island
-                            </p>
-                            <p className="mt-1">
-                                Chicago, IL 60601
-                            </p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+const Contacts = () => {
+  const [email, setEmail] = React.useState('')
+  const [name, setName] = React.useState('')
+  const [isValidName, setValidName] = React.useState(true)
+  const [isValidMail, setValidMail] = React.useState(true)
 
-  </Layouts.Application>
-)
+  const validName = () => {
+    const re = /^[a-zA-Z ]+$/
+    return re.test(name)
+  }
+
+  const validEmail = () => {
+    const re =
+      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    return re.test(email)
+  }
+
+  const sendMail = () => {}
+
+  const validate = () => {
+    !validName() && setValidName(!isValidName)
+    !validEmail() && setValidMail(!isValidMail)
+
+    validName() && validEmail() ? sendMail() : null
+  }
+
+  return (
+    <Layouts.Application pageTitle='Contact me | Fabian Facinou'>
+      <div className='bg-white'>
+        <div className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8 flex items-center justify-center'>
+          <form className='w-full max-w-2xl'>
+            <div className='grid grid-cols-2 gap-6'>
+              <div className='flex flex-wrap -mx-3 mb-6'>
+                <div className='w-full px-3'>
+                  <label
+                    className='block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2'
+                    style={{ fontFamily: 'eurostile' }}
+                    htmlFor='grid-password'>
+                    Nom
+                  </label>
+                  <input
+                    className='appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
+                    id='nick'
+                    type='text'
+                    onChange={e => setName(e.target.value)}
+                  />
+                  {!isValidName && <p className='text-red-500 text-xs italic'>Veuillez renseigner un nom valide.</p>}
+                </div>
+              </div>
+              <div className='flex flex-wrap -mx-3 mb-6'>
+                <div className='w-full px-3'>
+                  <label
+                    className='block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2'
+                    style={{ fontFamily: 'eurostile' }}
+                    htmlFor='grid-password'>
+                    E-mail
+                  </label>
+                  <input
+                    className='appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
+                    id='email'
+                    onChange={e => setEmail(e.target.value)}
+                  />
+                  {!isValidMail && <p className='text-red-500 text-xs italic'>Veuillez renseigner un e-mail valide.</p>}
+                </div>
+              </div>
+            </div>
+            <div className='flex flex-wrap -mx-3 mb-6'>
+              <div className='w-full px-3'>
+                <label
+                  className='block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2'
+                  style={{ fontFamily: 'eurostile' }}
+                  htmlFor='grid-password'>
+                  Message
+                </label>
+                <textarea
+                  className='resize-y appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48'
+                  id='message'></textarea>
+              </div>
+            </div>
+            <div className='flex items-center justify-center'>
+              <button
+                onClick={validate}
+                className='w-56 h-14 py-3 px-6 bg-white hover:bg-blue-500 border-2 border-blue-500 rounded-full font-semibold text-blue-500 hover:text-white transition duration-500 ease-in-out'>
+                Contactez moi
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </Layouts.Application>
+  )
+}
 
 export default Contacts

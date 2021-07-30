@@ -1,11 +1,11 @@
-import React from "react";
-import Base from "../base";
-import { FunctionComponent, ReactNode, ReactElement } from "react";
+import React from 'react'
+import Base from '../base'
+import { FunctionComponent, ReactNode, ReactElement } from 'react'
 /* import { useRouter } from "next/router"; */
-import CustomNavBar from "../../../components/presentational/navbar"
+import Navbar from '../../../components/Nav'
 
 interface Props {
-  children: ReactNode,
+  children: ReactNode
   pageTitle: string
 }
 
@@ -14,18 +14,14 @@ const Main: FunctionComponent<Props> = ({ children, pageTitle }): ReactElement =
 
   return (
     <Base title={pageTitle}>
-      <div className="w-full h-full">
-        <div
-            className="w-full h-full"
-        >
-            <CustomNavBar />
-            {children}
+      <div className='w-full h-full'>
+        <div className='w-full h-full'>
+          <Navbar />
+          {children}
         </div>
       </div>
     </Base>
-  );
-};
+  )
+}
 
-
-
-export default Main;
+export default Main
