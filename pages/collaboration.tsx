@@ -35,7 +35,7 @@ const Collaboration = () => {
   })
 
   return (
-    <Layouts.Application pageTitle="Contact me | Fabian Facinou">
+    <Layouts.Application pageTitle="Collaboration | Fabian Facinou">
       <div className="bg-white">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8 flex items-center justify-center">
           <form className="w-full max-w-2xl">

@@ -19,7 +19,7 @@ const Projects = () => {
   }
 
   return (
-    <Layouts.Application pageTitle="Projects | Fabian Facinou">
+    <Layouts.Application pageTitle="Projet | Fabian Facinou">
       <div>
         <div className="mt-10 text-center title text-4xl">Title</div>
         <div className="w-full h-[460px] relative px-64">
