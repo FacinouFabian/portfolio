@@ -149,11 +149,14 @@ const Home = () => (
           <div className="w-full h-[300px] relative flex flex-col items-center justify-center">
             <h2 className="title text-5xl font-semibold">Intéressé à travailler ensemble ?</h2>
             <p className="text-gray-800 mt-4  font-thin text-lg">
-              Je suis ouvert à discuter et à l'écoute de nouvelles opportunités.
+              Je suis ouvert à la discussion et à l'écoute de nouvelles opportunités.
             </p>
-            <button className="mt-10 w-64 h-16 py-3 px-6 bg-white hover:bg-blue-500 border border-blue-500 rounded-full font-semibold hover:text-white transition duration-500 ease-in-out">
-              Contactez moi
-            </button>
+
+            <Link href="/contact">
+              <div className="mt-10 w-64 h-16 py-3 px-6 flex items-center justify-center bg-white hover:bg-blue-500 border-2 border-blue-500 rounded-full font-semibold text-blue-500 hover:text-white transition duration-500 ease-in-out">
+                Contactez moi
+              </div>
+            </Link>
           </div>
 
           <div className="w-full h-32 flex justify-center relative">

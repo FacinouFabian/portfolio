@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import sendMail from '@/core/lib/sendMail'
 
-const handler = (_req: NextApiRequest, res: NextApiResponse) => {
+const handler = async (_req: NextApiRequest, res: NextApiResponse) => {
   try {
     if (!_req) {
       throw new Error('Cannot find data')
@@ -17,8 +17,9 @@ const handler = (_req: NextApiRequest, res: NextApiResponse) => {
       content,
     }
 
-    sendMail(options)
-    res.status(200).json(_req.body)
+    await sendMail(options).then((message) => {
+      res.status(200).json({ statusCode: 200, message })
+    })
   } catch (err) {
     res.status(500).json({ statusCode: 500, message: err.message })
   }

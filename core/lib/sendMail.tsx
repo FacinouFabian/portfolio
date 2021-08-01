@@ -61,11 +61,15 @@ export default ({ email, name, type, subject, content }: Props) => {
     `,
   }
 
-  transporter.sendMail(message, function (err, info) {
-    if (err) {
-      console.log(err)
-    } else {
-      console.log(info)
-    }
+  return new Promise((resolve, reject) => {
+    transporter.sendMail(message, function (err, info) {
+      if (err) {
+        console.log(err)
+        reject(err.message)
+      } else {
+        console.log(info)
+        resolve('Done.')
+      }
+    })
   })
 }
