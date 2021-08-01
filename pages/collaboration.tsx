@@ -22,8 +22,8 @@ const Collaboration = () => {
       body: JSON.stringify({ email, name, type, content: details }),
     }
     await fetch(`${process.env.apiBaseURL}/sendMail`, requestOptions)
-      .then(response => console.log(response.json()))
-      .catch(e => console.log(e))
+      .then((response) => console.log(response.json()))
+      .catch((e) => console.log(e))
   }
 
   const validate = () => {
@@ -35,74 +35,80 @@ const Collaboration = () => {
   })
 
   return (
-    <Layouts.Application pageTitle='Contact me | Fabian Facinou'>
-      <div className='bg-white'>
-        <div className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8 flex items-center justify-center'>
-          <form className='w-full max-w-2xl'>
-            <div className='grid grid-cols-2 gap-6'>
-              <div className='flex flex-wrap -mx-3 mb-6'>
-                <div className='w-full px-3'>
+    <Layouts.Application pageTitle="Contact me | Fabian Facinou">
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8 flex items-center justify-center">
+          <form className="w-full max-w-2xl">
+            <div className="grid grid-cols-2 gap-6">
+              <div className="flex flex-wrap -mx-3 mb-6">
+                <div className="w-full px-3">
                   <label
-                    className='block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2'
+                    className="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2"
                     style={{ fontFamily: 'eurostile' }}
-                    htmlFor='grid-password'>
+                    htmlFor="grid-password"
+                  >
                     Nom du projet
                   </label>
                   <input
-                    className='appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
-                    id='email'
-                    onChange={e => setName(e.target.value)}
+                    className="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="email"
+                    onChange={(e) => setName(e.target.value)}
                   />
-                  {!isValidMail && <p className='text-red-500 text-xs italic'>Veuillez renseigner un e-mail valide.</p>}
+                  {!isValidMail && <p className="text-red-500 text-xs italic">Veuillez renseigner un e-mail valide.</p>}
                 </div>
               </div>
-              <div className='flex flex-wrap -mx-3 mb-6'>
-                <div className='w-full px-3'>
+              <div className="flex flex-wrap -mx-3 mb-6">
+                <div className="w-full px-3">
                   <label
-                    className='block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2'
+                    className="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2"
                     style={{ fontFamily: 'eurostile' }}
-                    htmlFor='grid-password'>
+                    htmlFor="grid-password"
+                  >
                     E-mail
                   </label>
                   <input
-                    className='appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
-                    id='email'
-                    onChange={e => setEmail(e.target.value)}
+                    className="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="email"
+                    onChange={(e) => setEmail(e.target.value)}
                   />
-                  {!isValidMail && <p className='text-red-500 text-xs italic'>Veuillez renseigner un e-mail valide.</p>}
+                  {!isValidMail && <p className="text-red-500 text-xs italic">Veuillez renseigner un e-mail valide.</p>}
                 </div>
               </div>
             </div>
-            <div className='flex flex-wrap -mx-3 mb-6'>
-              <div className='w-full px-3'>
+            <div className="flex flex-wrap -mx-3 mb-6">
+              <div className="w-full px-3">
                 <label
-                  className='block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2'
+                  className="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2"
                   style={{ fontFamily: 'eurostile' }}
-                  htmlFor='grid-password'>
+                  htmlFor="grid-password"
+                >
                   Type
                 </label>
                 <Select state={[type, setType]} list={['Web app', 'Mobile app']} />
               </div>
             </div>
-            <div className='flex flex-wrap -mx-3 mb-6'>
-              <div className='w-full px-3'>
+            <div className="flex flex-wrap -mx-3 mb-6">
+              <div className="w-full px-3">
                 <label
-                  className='block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2'
+                  className="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2"
                   style={{ fontFamily: 'eurostile' }}
-                  htmlFor='grid-password'>
+                  htmlFor="grid-password"
+                >
                   Details
                 </label>
                 <textarea
-                  onChange={e => setDetails(e.target.value)}
-                  className='resize-y appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48'
-                  id='message'></textarea>
+                  onChange={(e) => setDetails(e.target.value)}
+                  className="resize-y appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48"
+                  id="message"
+                ></textarea>
               </div>
             </div>
-            <div className='flex items-center justify-center'>
+            <div className="flex items-center justify-center">
               <button
-                type='button'
+                type="button"
                 onClick={validate}
-                className='w-56 h-14 py-3 px-6 bg-white hover:bg-blue-500 border-2 border-blue-500 rounded-full font-semibold text-blue-500 hover:text-white transition duration-500 ease-in-out'>
+                className="w-56 h-14 py-3 px-6 bg-white hover:bg-blue-500 border-2 border-blue-500 rounded-full font-semibold text-blue-500 hover:text-white transition duration-500 ease-in-out"
+              >
                 Envoyer
               </button>
             </div>

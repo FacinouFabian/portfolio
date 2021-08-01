@@ -14,8 +14,8 @@ const Main: FunctionComponent<Props> = ({ children, pageTitle }): ReactElement =
 
   return (
     <Base title={pageTitle}>
-      <div className='w-full h-full'>
-        <div className='w-full h-full'>
+      <div className="w-full h-full">
+        <div className="w-full h-full">
           <Navbar />
           {children}
         </div>

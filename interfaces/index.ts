@@ -5,12 +5,12 @@
 // import User from 'path/to/interfaces';
 
 export type User = {
-  firstname: string;
-  lastname: string;
-  age: number;
-  school: string;
-  country: string;
-  birthday: Date;
-  role: string;
-  technologies: string[];
-};
+  firstname: string
+  lastname: string
+  age: number
+  school: string
+  country: string
+  birthday: Date
+  role: string
+  technologies: string[]
+}

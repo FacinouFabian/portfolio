@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react'
 
 type Props = {
-  color: string;
-};
+  color: string
+}
 
 const HeroImage = ({ color }: Props) => (
   <svg
@@ -15,13 +15,7 @@ const HeroImage = ({ color }: Props) => (
   >
     <title>Group 32</title>
     <desc>Created with Sketch.</desc>
-    <g
-      id="Website"
-      stroke="none"
-      stroke-width="1"
-      fill="none"
-      fill-rule="evenodd"
-    >
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
       <g id="Group-32" transform="translate(0.000000, 3.000000)">
         <path
           d="M126.007899,38.7650154 C126.007899,34.7383476 129.263975,31.4816286 133.298472,31.4816286 L386.871877,31.4816286 C390.898902,31.4816286 394.162451,34.7405 394.162451,38.7650154 L394.162451,212.307477 C394.162451,216.334145 390.906375,219.590864 386.871877,219.590864 L133.298472,219.590864 C129.271447,219.590864 126.007899,216.331993 126.007899,212.307477 L126.007899,38.7650154 Z"
@@ -180,14 +174,7 @@ const HeroImage = ({ color }: Props) => (
           height="105.073079"
           rx="2.08142999"
         ></rect>
-        <ellipse
-          id="Oval-3"
-          fill="#293347"
-          cx="254.357573"
-          cy="49.9543198"
-          rx="1.3017276"
-          ry="1.30089374"
-        ></ellipse>
+        <ellipse id="Oval-3" fill="#293347" cx="254.357573" cy="49.9543198" rx="1.3017276" ry="1.30089374"></ellipse>
         <path
           d="M179.899422,11.9682224 L300.177718,11.9682224 L300.177718,127.227794 C300.177718,131.24909 296.908511,134.512413 292.886465,134.512413 L187.190674,134.512413 C183.165634,134.512413 179.899422,131.247907 179.899422,127.227794 L179.899422,11.9682224 Z"
           id="Case"
@@ -202,30 +189,9 @@ const HeroImage = ({ color }: Props) => (
           stroke-width="2.08142999"
           fill="#FFFFFF"
         ></path>
-        <ellipse
-          id="Oval-5"
-          fill={color}
-          cx="191.093612"
-          cy="6.50446872"
-          rx="2.34310968"
-          ry="2.34160874"
-        ></ellipse>
-        <ellipse
-          id="Oval-5"
-          fill={color}
-          cx="198.903978"
-          cy="6.50446872"
-          rx="2.34310968"
-          ry="2.34160874"
-        ></ellipse>
-        <ellipse
-          id="Oval-5"
-          fill={color}
-          cx="206.714343"
-          cy="6.50446872"
-          rx="2.34310968"
-          ry="2.34160874"
-        ></ellipse>
+        <ellipse id="Oval-5" fill={color} cx="191.093612" cy="6.50446872" rx="2.34310968" ry="2.34160874"></ellipse>
+        <ellipse id="Oval-5" fill={color} cx="198.903978" cy="6.50446872" rx="2.34310968" ry="2.34160874"></ellipse>
+        <ellipse id="Oval-5" fill={color} cx="206.714343" cy="6.50446872" rx="2.34310968" ry="2.34160874"></ellipse>
         <rect
           id="Rectangle-11"
           fill={color}
@@ -467,30 +433,9 @@ const HeroImage = ({ color }: Props) => (
           stroke-width="2.08142999"
           fill="#FFFFFF"
         ></path>
-        <ellipse
-          id="Oval-5"
-          fill={color}
-          cx="426.185617"
-          cy="88.2005958"
-          rx="2.34310968"
-          ry="2.34160874"
-        ></ellipse>
-        <ellipse
-          id="Oval-5"
-          fill={color}
-          cx="433.995982"
-          cy="88.2005958"
-          rx="2.34310968"
-          ry="2.34160874"
-        ></ellipse>
-        <ellipse
-          id="Oval-5"
-          fill={color}
-          cx="441.806348"
-          cy="88.2005958"
-          rx="2.34310968"
-          ry="2.34160874"
-        ></ellipse>
+        <ellipse id="Oval-5" fill={color} cx="426.185617" cy="88.2005958" rx="2.34310968" ry="2.34160874"></ellipse>
+        <ellipse id="Oval-5" fill={color} cx="433.995982" cy="88.2005958" rx="2.34310968" ry="2.34160874"></ellipse>
+        <ellipse id="Oval-5" fill={color} cx="441.806348" cy="88.2005958" rx="2.34310968" ry="2.34160874"></ellipse>
         <ellipse
           id="Oval-6"
           stroke={color}
@@ -549,22 +494,8 @@ const HeroImage = ({ color }: Props) => (
           stroke-width="2.08142999"
           stroke-linecap="square"
         ></line>
-        <ellipse
-          id="Oval-5"
-          fill={color}
-          cx="529.282443"
-          cy="123.845084"
-          rx="3.12414624"
-          ry="3.12214499"
-        ></ellipse>
-        <ellipse
-          id="Oval-5"
-          fill={color}
-          cx="529.282443"
-          cy="173.279047"
-          rx="3.12414624"
-          ry="3.12214499"
-        ></ellipse>
+        <ellipse id="Oval-5" fill={color} cx="529.282443" cy="123.845084" rx="3.12414624" ry="3.12214499"></ellipse>
+        <ellipse id="Oval-5" fill={color} cx="529.282443" cy="173.279047" rx="3.12414624" ry="3.12214499"></ellipse>
         <g
           id="Group-60"
           transform="translate(439.463238, 115.519364)"
@@ -723,6 +654,6 @@ const HeroImage = ({ color }: Props) => (
       </g>
     </g>
   </svg>
-);
+)
 
-export default HeroImage;
+export default HeroImage

@@ -19,47 +19,47 @@ const Projects = () => {
   }
 
   return (
-    <Layouts.Application pageTitle='Projects | Fabian Facinou'>
+    <Layouts.Application pageTitle="Projects | Fabian Facinou">
       <div>
-        <div className='mt-10 text-center title text-4xl'>Title</div>
-        <div className='w-full h-[460px] relative px-64'>
-          <Slider {...settings} className='w-full h-full'>
-            <div className='h-full relative'>
-              <div className='w-full h-full absolute flex items-center justify-center bg-gray-900 bg-opacity-80'>
-                <div className='title-white text-6xl'>A venir.</div>
+        <div className="mt-10 text-center title text-4xl">Title</div>
+        <div className="w-full h-[460px] relative px-64">
+          <Slider {...settings} className="w-full h-full">
+            <div className="h-full relative">
+              <div className="w-full h-full absolute flex items-center justify-center bg-gray-900 bg-opacity-80">
+                <div className="title-white text-6xl">A venir.</div>
               </div>
-              <img className='w-full h-full object-cover' src={defaultImage} />
+              <img className="w-full h-full object-cover" src={defaultImage} />
               {/* <div className='w-full h-full bg-cover' style={{ backgroundImage: 'url(/images/Fab.jpg)' }} /> */}
             </div>
-            <div className='h-full relative'>
-              <div className='w-full h-full absolute flex items-center justify-center bg-gray-900 bg-opacity-80'>
-                <div className='title-white text-6xl'>A venir.</div>
+            <div className="h-full relative">
+              <div className="w-full h-full absolute flex items-center justify-center bg-gray-900 bg-opacity-80">
+                <div className="title-white text-6xl">A venir.</div>
               </div>
-              <img className='w-full h-full object-cover' src={defaultImage} />
+              <img className="w-full h-full object-cover" src={defaultImage} />
               {/* <div className='w-full h-full bg-cover' style={{ backgroundImage: 'url(/images/Fab.jpg)' }} /> */}
             </div>
-            <div className='h-full relative'>
-              <div className='w-full h-full absolute flex items-center justify-center bg-gray-900 bg-opacity-80'>
-                <div className='title-white text-6xl'>A venir.</div>
+            <div className="h-full relative">
+              <div className="w-full h-full absolute flex items-center justify-center bg-gray-900 bg-opacity-80">
+                <div className="title-white text-6xl">A venir.</div>
               </div>
-              <img className='w-full h-full object-cover' src={defaultImage} />
+              <img className="w-full h-full object-cover" src={defaultImage} />
               {/* <div className='w-full h-full bg-cover' style={{ backgroundImage: 'url(/images/Fab.jpg)' }} /> */}
             </div>
-            <div className='h-full relative'>
-              <div className='w-full h-full absolute flex items-center justify-center bg-gray-900 bg-opacity-80'>
-                <div className='title-white text-6xl'>A venir.</div>
+            <div className="h-full relative">
+              <div className="w-full h-full absolute flex items-center justify-center bg-gray-900 bg-opacity-80">
+                <div className="title-white text-6xl">A venir.</div>
               </div>
-              <img className='w-full h-full object-cover' src={defaultImage} />
+              <img className="w-full h-full object-cover" src={defaultImage} />
               {/* <div className='w-full h-full bg-cover' style={{ backgroundImage: 'url(/images/Fab.jpg)' }} /> */}
             </div>
           </Slider>
         </div>
-        <div className='w-full pt-20 pb-10 text-center'>
+        <div className="w-full pt-20 pb-10 text-center">
           <p>Lorem ipsum dolor sit amet.</p>
         </div>
       </div>
-      <div className='py-4 text-center'>
-        <span className='title text-2xl'>Les outils/technos utilisées</span>
+      <div className="py-4 text-center">
+        <span className="title text-2xl">Les outils/technos utilisées</span>
       </div>
     </Layouts.Application>
   )

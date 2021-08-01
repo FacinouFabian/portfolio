@@ -4,8 +4,8 @@ module.exports = {
     ecmaVersion: 2019,
     sourceType: 'module',
   },
-  extends: ['plugin:@typecript-eslint/recommended', 'prettier/@typerscript-eslint', 'plugin:prettier/recommended'],
+  extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
   rules: {
-    '@typecript-eslint/no-inferrable-types': 'on',
+    '@typescript-eslint/no-inferrable-types': 1,
   },
 }
