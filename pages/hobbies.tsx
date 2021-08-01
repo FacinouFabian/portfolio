@@ -1,6 +1,6 @@
 import Layouts from '../core/layouts'
 
-const Hobbies = () => (
+const Hobbies = (): JSX.Element => (
   <Layouts.Application pageTitle="Hobbies | Fabian Facinou">
     <div>
       <div className="bg-gray-100 lg:py-12 lg:flex lg:justify-center">

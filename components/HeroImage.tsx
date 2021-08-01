@@ -4,7 +4,7 @@ type Props = {
   color: string
 }
 
-const HeroImage = ({ color }: Props) => (
+const HeroImage = ({ color }: Props): JSX.Element => (
   <svg
     width="650px"
     height="265px"

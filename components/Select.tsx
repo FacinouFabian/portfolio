@@ -7,11 +7,11 @@ type Props = {
   list: string[]
 }
 
-function classNames(...classes: string[]) {
+function classNames(...classes: string[]): string {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Select({ state, list }: Props) {
+export default function Select({ state, list }: Props): JSX.Element {
   const [selected, setSelected] = state
 
   return (

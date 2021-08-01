@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Layouts from '../core/layouts/'
 
-const Contacts = () => {
+const Contacts = (): JSX.Element => {
   const [email, setEmail] = React.useState('')
   const [subject, setSubject] = React.useState('')
   const [message, setMessage] = React.useState('')

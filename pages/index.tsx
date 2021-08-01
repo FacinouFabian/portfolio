@@ -5,7 +5,7 @@ import Project from '../components/Project'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi'
 
-const Home = () => (
+const Home = (): JSX.Element => (
   <Layouts.Application pageTitle="Portfolio | Fabian Facinou">
     <>
       <div className="font-sans bg-white">

@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-const Navbar = () => (
+const Navbar = (): JSX.Element => (
   <div className="px-28 w-full h-[100px] flex items-center justify-end">
     <div className="flex items-center space-x-8">
       <Link href="/about">

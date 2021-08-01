@@ -2,7 +2,7 @@ import * as React from 'react'
 import Layouts from '../core/layouts'
 import Select from '@/components/Select'
 
-const Collaboration = () => {
+const Collaboration = (): JSX.Element => {
   const [email, setEmail] = React.useState('')
   const [name, setName] = React.useState('')
   const [type, setType] = React.useState('')

@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import sendMail from '@/core/lib/sendMail'
 
-const handler = async (_req: NextApiRequest, res: NextApiResponse) => {
+const handler = async (_req: NextApiRequest, res: NextApiResponse): Promise<void> => {
   try {
     if (!_req) {
       throw new Error('Cannot find data')
