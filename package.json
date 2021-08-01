@@ -26,8 +26,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
-    "@mhirba/eslint-config-base": "^1.0.3",
-    "@mhirba/eslint-config-react": "^1.0.3",
     "@types/dotenv": "^8.2.0",
     "@types/lodash": "^4.14.171",
     "@types/node": "^16.4.7",

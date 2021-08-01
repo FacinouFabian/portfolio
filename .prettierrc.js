@@ -1,3 +1,8 @@
-const prettierrc = require("@mhirba/eslint-config-react/.prettierrc");
-
-module.exports = prettierrc;
+module.exports = {
+  printWidth: 120,
+  tabWidth: 2,
+  useTabs: false,
+  singleQuote: true,
+  bracketSpacing: true,
+  semi: false,
+}

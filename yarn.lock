@@ -288,16 +288,6 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.0.tgz#87de7af9c231826fdd68ac7258f77c429e0e5fcf"
   integrity sha512-wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==
 
-"@mhirba/eslint-config-base@^1.0.3":
-  version "1.0.3"
-  resolved "https://npm.pkg.github.com/download/@mhirba/eslint-config-base/1.0.3/861bdb1917adbc10db8157b781a8f148f484b1d7414bf5f50232d6fbfe604102#d1f40c30f021257b03a447b97a296361bf5e2dfd"
-  integrity sha512-vy7xNr8j58BbukZ0ygoExpgvhzlzMXYeZy57arWJnOEQPYlgfZjMNU6N7mjuX5vl99xQdjIt6BE2jZI4y0FK/w==
-
-"@mhirba/eslint-config-react@^1.0.3":
-  version "1.0.3"
-  resolved "https://npm.pkg.github.com/download/@mhirba/eslint-config-react/1.0.3/266e8be819a3873459a02201c9c0fc26cca3db1feb86ad794eb396e7bb537c58#e150431a82e68b6445886a70baed25b99833d02f"
-  integrity sha512-J1RSvC3OGCK7xd9puX4472zdoxrryCnFAdSziGbDRjvIVMwmtTi+Zhp6cNTEbY0O2KUdFZBUJ5ozPCMpNEKWjA==
-
 "@next/env@11.0.1":
   version "11.0.1"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-11.0.1.tgz#6dc96ac76f1663ab747340e907e8933f190cc8fd"
