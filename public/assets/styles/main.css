@@ -26,6 +26,18 @@ body {
   background: #718096;
 }
 
+.slick-slider > .slick-list,
+.slick-list > .slick-track,
+.slick-slide > div,
+.slick-slide > div {
+  height: 100% !important;
+}
+
+.slick-arrow::before {
+  color: #141c3a !important;
+  font-size: 45px;
+}
+
 .title {
   color: #141c3a;
   margin-bottom: 1.5rem;
@@ -35,7 +47,6 @@ body {
 
 .title-white {
   color: #ffffff;
-  margin-bottom: 1.5rem;
   line-height: 1.125;
   font-family: 'eurostile-bold', 'sans-serif';
 }
@@ -85,10 +96,6 @@ body {
   top: 50%;
   left: 50%;
   opacity: 1;
-}
-
-.fadeIn-bottom {
-  top: 80%;
 }
 
 .fadeIn-top {

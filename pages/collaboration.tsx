@@ -1,10 +1,12 @@
 import * as React from 'react'
-import Layouts from '../core/layouts/'
+import Layouts from '../core/layouts'
+import Select from '@/components/Select'
 
-const Contacts = () => {
+const Collaboration = () => {
   const [email, setEmail] = React.useState('')
-  const [subject, setSubject] = React.useState('')
-  const [message, setMessage] = React.useState('')
+  const [name, setName] = React.useState('')
+  const [type, setType] = React.useState('')
+  const [details, setDetails] = React.useState('')
   const [isValidMail, setValidMail] = React.useState(true)
 
   const validEmail = () => {
@@ -17,9 +19,8 @@ const Contacts = () => {
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, subject, content: message }),
+      body: JSON.stringify({ email, name, type, content: details }),
     }
-
     await fetch(`${process.env.apiBaseURL}/sendMail`, requestOptions)
       .then(response => console.log(response.json()))
       .catch(e => console.log(e))
@@ -29,12 +30,32 @@ const Contacts = () => {
     !validEmail() ? setValidMail(!isValidMail) : send()
   }
 
+  React.useEffect(() => {
+    console.log(process.env.apiBaseURL)
+  })
+
   return (
     <Layouts.Application pageTitle='Contact me | Fabian Facinou'>
       <div className='bg-white'>
         <div className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8 flex items-center justify-center'>
           <form className='w-full max-w-2xl'>
             <div className='grid grid-cols-2 gap-6'>
+              <div className='flex flex-wrap -mx-3 mb-6'>
+                <div className='w-full px-3'>
+                  <label
+                    className='block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2'
+                    style={{ fontFamily: 'eurostile' }}
+                    htmlFor='grid-password'>
+                    Nom du projet
+                  </label>
+                  <input
+                    className='appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
+                    id='email'
+                    onChange={e => setName(e.target.value)}
+                  />
+                  {!isValidMail && <p className='text-red-500 text-xs italic'>Veuillez renseigner un e-mail valide.</p>}
+                </div>
+              </div>
               <div className='flex flex-wrap -mx-3 mb-6'>
                 <div className='w-full px-3'>
                   <label
@@ -58,13 +79,9 @@ const Contacts = () => {
                   className='block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2'
                   style={{ fontFamily: 'eurostile' }}
                   htmlFor='grid-password'>
-                  Objet
+                  Type
                 </label>
-                <input
-                  className='appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
-                  id='email'
-                  onChange={e => setSubject(e.target.value)}
-                />
+                <Select state={[type, setType]} list={['Web app', 'Mobile app']} />
               </div>
             </div>
             <div className='flex flex-wrap -mx-3 mb-6'>
@@ -73,10 +90,10 @@ const Contacts = () => {
                   className='block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2'
                   style={{ fontFamily: 'eurostile' }}
                   htmlFor='grid-password'>
-                  Message
+                  Details
                 </label>
                 <textarea
-                  onChange={e => setMessage(e.target.value)}
+                  onChange={e => setDetails(e.target.value)}
                   className='resize-y appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48'
                   id='message'></textarea>
               </div>
@@ -96,4 +113,4 @@ const Contacts = () => {
   )
 }
 
-export default Contacts
+export default Collaboration

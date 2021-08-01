@@ -111,44 +111,23 @@ const Home = () => (
 
           <div className='w-full h-[400px] bg-gray-800 relative py-20 flex justify-center pattern'>
             <div className='flex flex-col items-center text-center px-56'>
-              <h2 className='title-white text-5xl font-semibold'>Mes derniers travaux.</h2>
+              <h2 className='title-white mb-[1.5rem] text-5xl font-semibold'>Mes derniers travaux.</h2>
 
               <p className='text-white mt-4  font-thin text-lg'>
                 Voici quelques uns de mes projets, effectués en entreprise mais également ceux à titre personnel.
               </p>
             </div>
 
-            <div className='w-4/5 h-auto pb-10 px-4 absolute mt-56 grid grid-cols-3 gap-10'>
-              <Project
-                title='This is a title'
-                description='This is a short description'
-                href='https://unsplash.com/photos/HkTMcmlMOUQ'
-              />
-              <Project
-                title='This is a title'
-                description='This is a short description'
-                href='https://unsplash.com/photos/HkTMcmlMOUQ'
-              />
-              <Project
-                title='This is a title'
-                description='This is a short description'
-                href='https://unsplash.com/photos/HkTMcmlMOUQ'
-              />
-              <Project
-                title='This is a title'
-                description='This is a short description'
-                href='https://unsplash.com/photos/HkTMcmlMOUQ'
-              />
-              <Project
-                title='This is a title'
-                description='This is a short description'
-                href='https://unsplash.com/photos/HkTMcmlMOUQ'
-              />
-              <Project
-                title='This is a title'
-                description='This is a short description'
-                href='https://unsplash.com/photos/HkTMcmlMOUQ'
-              />
+            <div className='w-4/5 h-auto absolute mt-56 grid grid-cols-3 gap-10'>
+              <div className='absolute w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-80 z-50'>
+                <span className='title-white text-6xl'>A venir</span>
+              </div>
+              <Project title='Title' description='Description' href='https://unsplash.com/photos/HkTMcmlMOUQ' />
+              <Project title='Title' description='Description' href='https://unsplash.com/photos/HkTMcmlMOUQ' />
+              <Project title='Title' description='Description' href='https://unsplash.com/photos/HkTMcmlMOUQ' />
+              <Project title='Title' description='Description' href='https://unsplash.com/photos/HkTMcmlMOUQ' />
+              <Project title='Title' description='Description' href='https://unsplash.com/photos/HkTMcmlMOUQ' />
+              <Project title='Title' description='Description' href='https://unsplash.com/photos/HkTMcmlMOUQ' />
             </div>
           </div>
 
@@ -177,7 +156,23 @@ const Home = () => (
             </button>
           </div>
 
-          <footer className='h-64 flex flex-col items-center justify-center space-y-2 bg-gradient-to-b from-gray-800 to-gray-700'>
+          <div className='w-full h-32 flex justify-center relative'>
+            <div className='w-[1100px] h-[150px] py-4 px-16 absolute top-12 flex items-center justify-between rounded-lg bg-gray-900'>
+              <div className='flex items-center justify-center text-2xl'>
+                <div className='m-0 title-white'>Lancer un projet</div>
+              </div>
+              <p className='text-center text-white'>
+                Vous voudriez collaborer sur un projet ? <br /> Nous pouvons en discuter.
+              </p>
+              <Link href='/collaboration'>
+                <div className='w-48 h-16 py-3 px-6 flex items-center justify-center bg-transparent hover:bg-blue-500 border-2 border-blue-500 rounded-full font-semibold text-white cursor-pointer transition duration-500 ease-in-out'>
+                  C'est parti !
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          <footer className='h-[400px] pt-32 pb-10 flex flex-col items-center justify-center space-y-2 bg-gradient-to-b from-gray-800 to-gray-700'>
             <p className='text-xl text-center text-gray-200' style={{ fontFamily: 'eurostile-bold' }}>
               "Si j'ai pu voir plus loin, <br /> c'est que je me tenais sur les épaules de géants."
             </p>

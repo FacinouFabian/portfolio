@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 type Props = {
   title: string
-  description: string
+  description?: string
   image?: string
   href?: string
 }
@@ -19,7 +19,7 @@ const ListItem = ({ title, description, image, href }: Props) => (
         <img src={image ? image : defaultImage} />
         <div className='content-details fadeIn-top'>
           <h3 className='title-white uppercase text-3xl'>{title}</h3>
-          <p className='text-white'>{description}</p>
+          {description && <p className='text-white'>{description}</p>}
         </div>
       </div>
     </Link>
