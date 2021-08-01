@@ -33,7 +33,7 @@ const Home = (): JSX.Element => (
             </div>
           </div>
 
-          <div className="h-[600px] bg-gray-800 pattern py-20 lg:py-32">
+          <div className="h-[600px] flex items-center justify-center bg-gray-800 pattern py-20 lg:py-32 overflow-y-scroll">
             <div className="max-w-6xl px-6 mx-auto text-center">
               <h2 className="text-3xl font-semibold text-white">
                 Bonjour, <span className="bg-gray-700 text-white rounded px-1">je m'appelle Fabian</span>. Ravi de vous
@@ -58,7 +58,7 @@ const Home = (): JSX.Element => (
           </div>
 
           <div className="w-full h-[550px] bg-white relative py-20 flex justify-center">
-            <div className="w-4/5 h-auto absolute lg:-mt-52 flex flex-col lg:flex-row justify-center bg-white rounded-lg shadow-xl text-center">
+            <div className="w-4/5 h-auto absolute lg:-mt-52 flex flex-col lg:flex-row items-center justify-center bg-white rounded-lg shadow-xl text-center">
               <div className="w-[400px] flex-grow flex-shrink py-[60px] lg:border-r border-[#E6ECF8]">
                 <div className="w-16 h-16 mx-auto mb-12">
                   <img className="w-full h-full" src="/images/frontend.svg" alt="" />
