@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 const Navbar = (): JSX.Element => (
-  <div className="px-28 w-full h-[100px] flex items-center justify-end">
+  <div className="lg:px-28 w-full h-[100px] flex items-center justify-center lg:justify-end">
     <div className="flex items-center space-x-8">
       <Link href="/about">
         <span className=" cursor-pointer">A propos de ce site</span>

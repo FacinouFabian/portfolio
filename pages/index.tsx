@@ -33,14 +33,14 @@ const Home = (): JSX.Element => (
             </div>
           </div>
 
-          <div className="h-[600px] bg-gray-800 pattern py-32">
+          <div className="h-[600px] bg-gray-800 pattern py-20 lg:py-32">
             <div className="max-w-6xl px-6 mx-auto text-center">
               <h2 className="text-3xl font-semibold text-white">
                 Bonjour, <span className="bg-gray-700 text-white rounded px-1">je m'appelle Fabian</span>. Ravi de vous
                 rencontrer.
               </h2>
 
-              <p className="text-gray-200 mt-10 font-thin text-lg">
+              <p className="text-gray-200 mt-10 font-thin text-md lg:text-lg">
                 Mes années de lycée m'ont permises de découvrir la programmation. Ce sont cependant mes années de DUT
                 Réseaux et Télécommunications, mes recherches et mes projets personnels qui m'ont révélés les
                 différentes possibilités dans ce secteur.
@@ -58,8 +58,8 @@ const Home = (): JSX.Element => (
           </div>
 
           <div className="w-full h-[550px] bg-white relative py-20 flex justify-center">
-            <div className="w-4/5 h-auto absolute -mt-52 flex justify-center  bg-white rounded-lg shadow-xl text-center">
-              <div className="w-[400px] flex-grow flex-shrink py-[60px] border-r border-[#E6ECF8]">
+            <div className="w-4/5 h-auto absolute lg:-mt-52 flex flex-col lg:flex-row justify-center bg-white rounded-lg shadow-xl text-center">
+              <div className="w-[400px] flex-grow flex-shrink py-[60px] lg:border-r border-[#E6ECF8]">
                 <div className="w-16 h-16 mx-auto mb-12">
                   <img className="w-full h-full" src="/images/frontend.svg" alt="" />
                 </div>
@@ -74,7 +74,7 @@ const Home = (): JSX.Element => (
                   <li>Bootstrap</li>
                 </ul>
               </div>
-              <div className="w-[400px] flex-grow flex-shrink py-[60px] border-r border-[#E6ECF8]">
+              <div className="w-[400px] flex-grow flex-shrink py-[60px] lg:border-r border-[#E6ECF8]">
                 <div className="w-16 h-16 mx-auto mb-12">
                   <img className="w-full h-full" src="/images/backend.png" alt="" />
                 </div>
@@ -109,11 +109,11 @@ const Home = (): JSX.Element => (
             </div>
           </div>
 
-          <div className="w-full h-[400px] bg-gray-800 relative py-20 flex justify-center pattern">
-            <div className="flex flex-col items-center text-center px-56">
-              <h2 className="title-white mb-[1.5rem] text-5xl font-semibold">Mes derniers travaux.</h2>
+          <div className="w-full h-[400px] mt-[1200px] lg:mt-0 bg-gray-800 relative py-20 flex justify-center pattern">
+            <div className="flex flex-col items-center text-center lg:px-56 px-0">
+              <h2 className="title-white mb-[1.5rem] text-4xl lg:text-5xl font-semibold">Mes derniers travaux.</h2>
 
-              <p className="text-white mt-4  font-thin text-lg">
+              <p className="text-white lg:mt-4 font-thin text-md lg:text-lg">
                 Voici quelques uns de mes projets, effectués en entreprise mais également ceux à titre personnel.
               </p>
             </div>
@@ -131,36 +131,36 @@ const Home = (): JSX.Element => (
             </div>
           </div>
 
-          <div className="w-full h-[550px] relative py-20 flex flex-col items-center justify-center mt-[450px]">
-            <h2 className="title text-5xl font-semibold">J'ai travaillé avec ces entreprises</h2>
-            <div className="mt-16 grid grid-cols-3 px-16 items-center place-items-center">
-              <div className="w-40 h-40">
+          <div className="w-full h-[550px] relative py-20 flex flex-col items-center justify-center mt-[350px] lg:mt-[500px]">
+            <h2 className="title text-5xl font-semibold text-center">J'ai travaillé avec ces entreprises</h2>
+            <div className="lg:mt-16 grid grid-rows-3 md:grid-rows-1 md:grid-cols-3 px-16 items-center place-items-center">
+              <div className="w-32 h-32 lg:w-40 lg:h-40">
                 <img src="/images/mhirba.logo.png" alt="" />
               </div>
-              <div className="w-40 h-40">
+              <div className="w-32 h-32 lg:w-40 lg:h-40">
                 <img src="/images/BLIWE.png" alt="" />
               </div>
-              <div className="w-auto h-64">
+              <div className="lg:w-auto w-64 h-64">
                 <img src="/images/CHKoriginal.jpg" alt="" />
               </div>
             </div>
           </div>
 
-          <div className="w-full h-[300px] relative flex flex-col items-center justify-center">
+          <div className="w-full h-[300px] mt-24 lg:mt-0 relative flex flex-col items-center justify-center text-center">
             <h2 className="title text-5xl font-semibold">Intéressé à travailler ensemble ?</h2>
-            <p className="text-gray-800 mt-4  font-thin text-lg">
+            <p className="text-gray-800 mt-4 font-thin text-lg">
               Je suis ouvert à la discussion et à l'écoute de nouvelles opportunités.
             </p>
 
             <Link href="/contact">
-              <div className="mt-10 w-64 h-16 py-3 px-6 flex items-center justify-center bg-white hover:bg-blue-500 border-2 border-blue-500 rounded-full font-semibold text-blue-500 hover:text-white transition duration-500 ease-in-out">
+              <div className="mt-10 w-64 h-16 py-3 px-6 flex items-center justify-center bg-white hover:bg-blue-500 border-2 border-blue-500 rounded-full font-semibold text-blue-500 hover:text-white transition duration-500 ease-in-out cursor-pointer">
                 Contactez moi
               </div>
             </Link>
           </div>
 
           <div className="w-full h-32 flex justify-center relative">
-            <div className="w-[1100px] h-[150px] py-4 px-16 absolute top-12 flex items-center justify-between rounded-lg bg-gray-900">
+            <div className="lg:w-[1100px] lg:h-[150px] py-4 px-16 absolute top-12 flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0 rounded-lg bg-gray-900">
               <div className="flex items-center justify-center text-2xl">
                 <div className="m-0 title-white">Lancer un projet</div>
               </div>

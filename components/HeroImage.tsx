@@ -5,14 +5,7 @@ type Props = {
 }
 
 const HeroImage = ({ color }: Props): JSX.Element => (
-  <svg
-    width="650px"
-    height="265px"
-    viewBox="0 0 650 265"
-    version="1.1"
-    xmlns="http://www.w3.org/2000/svg"
-    className="mx-auto"
-  >
+  <svg height="265px" viewBox="0 0 650 265" version="1.1" xmlns="http://www.w3.org/2000/svg" className="w-full mx-auto">
     <title>Group 32</title>
     <desc>Created with Sketch.</desc>
     <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
