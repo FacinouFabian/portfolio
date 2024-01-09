@@ -1,5 +1,4 @@
 import * as React from 'react'
-import Layouts from '../core/layouts/'
 import Slider, { Settings } from 'react-slick'
 
 const defaultImage =
@@ -19,7 +18,7 @@ const Projects = (): JSX.Element => {
   }
 
   return (
-    <Layouts.Application pageTitle="Projet | Fabian Facinou">
+    <div>
       <div>
         <div className="mt-10 text-center title text-4xl">Title</div>
         <div className="w-full h-[460px] relative px-64">
@@ -61,7 +60,7 @@ const Projects = (): JSX.Element => {
       <div className="py-4 text-center">
         <span className="title text-2xl">Les outils/technos utilisées</span>
       </div>
-    </Layouts.Application>
+    </div>
   )
 }
 export default Projects

@@ -1,7 +1,7 @@
-import Layouts from '../core/layouts'
+import Link from "next/link"
 
-const Hobbies = (): JSX.Element => (
-  <Layouts.Application pageTitle="Hobbies | Fabian Facinou">
+const Hobbies = () => (
+  <div>
     <div>
       <div className="bg-gray-100 lg:py-12 lg:flex lg:justify-center">
         <div className="bg-white lg:mx-8 lg:flex lg:max-w-5xl lg:shadow-lg lg:rounded-lg">
@@ -16,21 +16,12 @@ const Hobbies = (): JSX.Element => (
           </div>
           <div className="py-12 px-6 max-w-xl lg:max-w-5xl lg:w-1/2">
             <h2 className="text-3xl text-gray-800 font-bold">
-              First one, <span className="text-indigo-600">Hyper Scape</span>
+              <span className="text-indigo-600">Le gaming</span>
             </h2>
             <p className="mt-4 text-gray-600">
-              Hyper Scape is a futuristic free-to-play battle royale developed by Ubisoft Montreal and published by
-              Ubisoft. The game is slated for release in 2020 on Windows, PlayStation 4, and Xbox One. The game is in
-              open beta during the month of July 2020 for a release in August of the same year.
+              Mon passe temps favori. J'aime jouer à différents types de jeux tels que les MMORPG, les jeux de survie, les battle royale ou encore les jeux d'arcade.
+              J'ai également été tenté par l'apprentissage de développement de jeux vidéeos avec Unreal Engine.
             </p>
-            <div className="mt-8">
-              <a
-                href="https://www.ubisoft.com/fr-fr/game/hyper-scape"
-                className="bg-gray-900 text-gray-100 px-5 py-3 font-semibold rounded"
-              >
-                Try it!
-              </a>
-            </div>
           </div>
         </div>
       </div>
@@ -45,20 +36,15 @@ const Hobbies = (): JSX.Element => (
           </div>
           <div className="py-12 px-6 max-w-xl lg:max-w-5xl lg:w-1/2">
             <h2 className="text-3xl text-gray-800 font-bold">
-              Second one, <span className="text-indigo-600">Rogue Company #RC</span>
+              <span className="text-indigo-600">La reconnaissance vocale</span>
             </h2>
             <p className="mt-4 text-gray-600">
-              Rogue Company is an upcoming Third-Person Shooter Multiplayer video game developed by First Watch Games
-              and published by Hi-Rez Studios.
+              Je m'intéresse également à la reconnaissance vocale, j'ai d'ailleurs eu l'occasion de travailler seul sur un projet de fin d'année en DUT dont l'objectif (qui a été atteint)
+              était de créer mon propre système de reconnaissance vocale. J'ai également eu la possibilité de développer des skills Alexa avec AWS Lambda et NodeJS durant mon
+              stage chez <Link href="https://www.efrei.fr/">
+              <span className="underline text-blue-600 cursor-pointer">@Bliwe</span>
+            </Link>.
             </p>
-            <div className="mt-8">
-              <a
-                href="https://www.roguecompany.com/"
-                className="bg-gray-900 text-gray-100 px-5 py-3 font-semibold rounded"
-              >
-                Try it!
-              </a>
-            </div>
           </div>
         </div>
       </div>
@@ -77,26 +63,17 @@ const Hobbies = (): JSX.Element => (
           </div>
           <div className="py-12 px-6 max-w-xl lg:max-w-5xl lg:w-1/2">
             <h2 className="text-3xl text-gray-800 font-bold">
-              Third one, <span className="text-indigo-600">Fall Guys</span>
+              <span className="text-indigo-600">Le foot</span>
             </h2>
             <p className="mt-4 text-gray-600">
-              Fall Guys: Ultimate Knockout is a Multiplayer video game developed by Mediatonic and published by Devolver
-              Digital. It was announced at E3 in June 2019. The game is available on Steam and PlayStation 4 since
-              August 4, 2020.
+              Le foot est devenu une passion pour moi dès mon enfance j'y ai joué jusqu'à mes 19 ans en club. Depuis je n'en pratique plus. Cependant je reste un passionné du foot
+              et je regarde beaucoup les matchs à la télé. Ligue 1 et Premier League notamment.
             </p>
-            <div className="mt-8">
-              <a
-                href="https://store.steampowered.com/app/1097150/Fall_Guys_Ultimate_Knockout/"
-                className="bg-gray-900 text-gray-100 px-5 py-3 font-semibold rounded"
-              >
-                Try it!
-              </a>
-            </div>
           </div>
         </div>
       </div>
     </div>
-  </Layouts.Application>
+  </div>
 )
 
 export default Hobbies

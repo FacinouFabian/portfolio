@@ -13,10 +13,10 @@ const defaultImage =
 
 const ListItem = ({ title, description, image, href }: Props): JSX.Element => (
   <div className="relative overflow-hidden rounded-lg content">
-    <Link href={href ? href : '#'}>
+    <Link href={href || '#'}>
       <div>
-        <div className="content-overlay"></div>
-        <img src={image ? image : defaultImage} />
+        <div className="content-overlay" />
+        <img src={image || defaultImage} />
         <div className="content-details fadeIn-top">
           <h3 className="title-white uppercase text-3xl">{title}</h3>
           {description && <p className="text-white">{description}</p>}

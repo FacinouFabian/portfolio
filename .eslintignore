@@ -1,7 +1,8 @@
 ## .eslintignore generated with love for Mhirba
-.babelrc.js
-.prettierrc.js
-
+.prettierrc.json
+build/
+dist/
+docs/
 tailwind.config.js
 postcss.config.js
 next.config.js

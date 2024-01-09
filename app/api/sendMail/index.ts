@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import sendMail from '@/core/lib/sendMail'
+import sendMail from '@/lib/sendMail'
 
 const handler = async (_req: NextApiRequest, res: NextApiResponse): Promise<void> => {
   try {
